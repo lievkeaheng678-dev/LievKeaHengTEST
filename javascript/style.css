@@ -1,0 +1,197 @@
+
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Open Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: weight;
+        font-style: normal;
+        font-variation-settings: "width" 100;
+
+
+    }
+
+    .navbar {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        padding: 25px 9%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 100;
+    }
+
+    .navbar h1 {
+        margin-bottom: -10px;
+        color: black;
+        font-size: 30px;
+        display: grid;
+    }
+.navlinks{
+    display: flex;
+    gap:20px;
+    font-size: 20px;
+}
+ /* Add this to your style.css for animated underline navlinks */
+.navlinks a {
+    position: relative;
+    text-decoration: none;
+    color: grey;
+    padding: 8px 0;
+    transition: color 0.3s;
+    font-weight: 500;
+}
+
+.navlinks a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2.5px;
+    background: linear-gradient(90deg, #9B3F15 60%, #fbeee6 100%);
+    border-radius: 2px;
+    transition: width 0.35s cubic-bezier(.4,0,.2,1);
+}
+
+.navlinks a:hover {
+    color: #9B3F15;
+}
+
+.navlinks a:hover::after {
+    width: 100%;
+}
+    .container-picture{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        
+    }
+    .container-picture img {
+        object-fit: cover;
+        margin-top: 80px;
+        filter: drop-shadow(50%);
+        filter: brightness(80%);
+       
+
+
+    }
+
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        align-items: center;
+
+    }
+
+    .container-all {
+        height: 560px;
+        width: 330px;
+        box-shadow: 0 8px 32px rgba(155, 63, 21, 0.12), 0 1.5px 8px rgba(0, 0, 0, 0.08);
+        padding: 20px;
+        border-radius: 32px 8px 32px 8px;
+        border: 3px solid transparent;
+         background: linear-gradient(135deg, #fff 85%, #fbeee6 100%) padding-box,
+                linear-gradient(135deg, #9B3F15 0%, #fbeee6 100%) border-box;
+         background-clip: padding-box, border-box;
+        transition: box-shadow 0.3s, border-color 0.3s, transform 0.2s;
+        transition: box-shadow 0.3s, border-color 0.3s, transform 0.2s;
+        position: relative;
+        overflow: hidden;
+        margin-left: 20px;
+        margin-top: 30px;
+
+
+    }
+
+    .container-all:hover {
+        box-shadow: 0 16px 48px rgba(155, 63, 21, 0.18), 0 3px 16px rgba(0, 0, 0, 0.12);
+        border-color: white;
+        transform: scale(1.03) rotateY(-1deg);
+    }
+
+    .container-img img {
+        height: 300px;
+        width: 300px;
+        object-fit: cover;
+        
+        
+    }
+
+    .container-price h3 {
+        color: green;
+        margin: 10px 0 0px 0;
+    }
+
+    .container-price h3:hover {
+        color: black;
+        transition: 2s;
+    }
+
+    .container-desc p {
+        color: #868A85;
+        margin-top: 18px;
+
+    }
+
+    .container-addtocart {
+        margin: 30px 0 0 0;
+        position: absolute;
+    }
+
+    .container-addtocart a {
+        text-decoration: none;
+        background-color: green;
+        color: white;
+        border: 11px solid green;
+        font-size: 12px;
+        border-radius: 10px;
+        padding: 2px;
+    }
+
+    .container-addtocart a:hover {
+        color: black;
+        transform: scale(1) rotateY(60deg);
+
+    }
+
+    .footer-all {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer-all a {
+        text-decoration: none;
+        list-style: none;
+        color: black
+    }
+
+    footer {
+        background: white;
+        margin-top: 30px;
+    }
+
+    .more {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .more a {
+        text-decoration: none;
+        color: grey;
+        margin-top: 25px;
+    }
+
+    .more a:hover {
+        color: #9B3F15;
+    }

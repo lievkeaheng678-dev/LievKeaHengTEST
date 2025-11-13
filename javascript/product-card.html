@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Card</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #f5f5f5;
+        }
+
+        .card {
+            position: relative;
+            width: 320px;
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .badge {
+            position: absolute;
+            top: 20px;
+            left: -35px;
+            width: 150px;
+            background: #ff4757;
+            color: white;
+            padding: 5px 0;
+            text-align: center;
+            transform: rotate(-45deg);
+            font-size: 14px;
+            font-weight: bold;
+            z-index: 1;
+        }
+
+        .card-image {
+            position: relative;
+            width: 100%;
+            height: 220px;
+            overflow: hidden;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s ease;
+
+        }
+
+        .card:hover .card-image img {
+            transform: scale(1.1);
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .product-category {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .product-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .rating {
+            color: #ffd700;
+            margin-bottom: 15px;
+        }
+
+        .price-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .current-price {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2ecc71;
+        }
+
+        .original-price {
+            font-size: 16px;
+            color: #999;
+            text-decoration: line-through;
+        }
+
+        .discount {
+            background: #2ecc71;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 14px;
+        }
+
+        .description {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .card-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .buy-button,
+        .cart-button {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .buy-button {
+            background: #2ecc71;
+            color: white;
+        }
+
+        .buy-button:hover {
+            background: #27ae60;
+            transform: translateY(-2px);
+        }
+
+        .cart-button {
+            background: #f1f1f1;
+            color: #333;
+        }
+
+        .cart-button:hover {
+            background: #e1e1e1;
+            transform: translateY(-2px);
+        }
+
+        .features {
+            display: flex;
+            gap: 15px;
+            margin: 15px 0;
+            padding: 15px 0;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+        }
+
+        .feature {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .feature i {
+            color: #2ecc71;
+        }
+
+        .stock-status {
+            display: inline-block;
+            padding: 4px 8px;
+            background: #e8f5e9;
+            color: #2ecc71;
+            border-radius: 4px;
+            font-size: 12px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div class="badge">20% OFF</div>
+        <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3" alt="Product Image">
+        </div>
+        <div class="card-content">
+            <div class="product-category">Sport Shoes</div>
+            <h2 class="product-title">Nike Air Max 2025</h2>
+            <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span style="color: #666; margin-left: 5px;">(4.5/5)</span>
+            </div>
+            <div class="stock-status">
+                <i class="fas fa-check-circle"></i>
+                In Stock
+            </div>
+            <div class="price-container">
+                <span class="current-price">$159.99</span>
+                <span class="original-price">$199.99</span>
+                <span class="discount">-20%</span>
+            </div>
+            <p class="description">
+                Experience ultimate comfort and style with the all-new Nike Air Max 2025.
+                Perfect for both athletic performance and casual wear.
+            </p>
+            <div class="features">
+                <div class="feature">
+                    <i class="fas fa-shipping-fast"></i>
+                    Free Shipping
+                </div>
+                <div class="feature">
+                    <i class="fas fa-undo"></i>
+                    30-Day Return
+                </div>
+                <div class="feature">
+                    <i class="fas fa-shield-alt"></i>
+                    Warranty
+                </div>
+            </div>
+            <div class="card-buttons">
+                <button class="buy-button">Buy Now</button>
+                <button class="cart-button">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Add animation for buttons
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('click', function (e) {
+                let x = e.clientX - e.target.offsetLeft;
+                let y = e.clientY - e.target.offsetTop;
+
+                let ripple = document.createElement('span');
+                ripple.style.left = x + 'px';
+                ripple.style.top = y + 'px';
+
+                this.appendChild(ripple);
+
+                setTimeout(() => {
+                    ripple.remove();
+                }, 1000);
+            });
+        });
+    </script>
+</body>
+
+</html>
